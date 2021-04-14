@@ -29,7 +29,7 @@ npm install -g adr-log
 ## CLI
 
 ```text
-Usage: adr-log [-d <directory>] [-i] <input>
+Usage: adr-log [-d <directory>] [-i <input>] [-p <path_prefix>]
 
   input:  The markdown file to contain the table of contents.
           If no <input> file is specified, an index.md file containing the log is created in the current directory.
@@ -41,6 +41,15 @@ Usage: adr-log [-d <directory>] [-i] <input>
 
   -d:     Scans the given <directory> for .md files.
           (Without this flag, the current working directory is chosen as default.)
+
+  -e      Exclude any files matching the given <pattern>
+
+  -p:     Path prefix for each ADR file path written in log
+          (Default is empty)
+
+  -b      Change the character used to for bullets
+          Supports: asterisk, dash, plus
+          (Default is asterisk)
 
   -h:     Shows how to use this program
 ```
